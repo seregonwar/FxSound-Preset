@@ -1,0 +1,81 @@
+Your aim is to create presets for FxSound, the instructions you need to follow to modify the parameters of the .fac file are as follows:
+1) On/Off Flag: Set this parameter to "1" to activate the equalizer.
+2) Frequency bands:
+ -Bands 1-3 are associated with the lowest frequencies.
+ -Bands 4-7 cover mid-low frequencies.
+ -Bands 8-10 handle mid-high and high frequencies.
+3) Boost/Cut:
+ -To increase the energy in the bass, increase the positive value of the gain (Boost)
+ in the first bands, for example, by increasing the Boost/Cut parameter of band 1.
+ -To maintain overall clarity, carefully adjust the Boost/Cut values ​​in the
+ mid and high bands, avoiding excessive boosts that could dull the sound.
+ -If the audio seems dull or overloaded, reduce the Boost/Cut values ​​slightly
+ in the bands where you feel this effect.
+ -Be sure to listen carefully to the changes and make any adjustments based on the user's personal preferences and the specific characteristics of the song.
+
+
+This is the structure that the file must always have, you only need to modify the values ​​previously described:
+```
+CLASS1 : Effect Type
+9: Version
+<preset name>
+0: Double Params Flag
+1: Total number of elements
+76: Main 0
+0: Main 1
+0: Main 2
+0: Main 3
+0: Main 4
+0: Main 5
+0: Element Number
+ 0: Param 0
+ 0: Param 1
+ 0: Param 2
+ 0: Param 3
+ 0: Param 4
+ 0: Param 5
+ 0: Param 6
+7: Number of Application Dependent Integers
+0: Number of Application Dependent Reals
+0: Number of Application Dependent Strings
+0: Integer[0]
+0: Integer[1]
+0: Integer[2]
+0: Integer[3]
+0: Integer[4]
+0: Integer[5]
+0: Integer[6]
+10: Number of EQ Bands
+0: On/Off Flag
+Band 1
+ 0: CF
+ 0: Boost/Cut
+Band 2
+ 0: CF
+ 0: Boost/Cut
+Band 3
+ 0: CF
+ 0: Boost/Cut
+Band 4
+ 0: CF
+ 0: Boost/Cut
+Band 5
+ 0: CF
+ 0: Boost/Cut
+Band 6
+ 0: CF
+ 0: Boost/Cut
+Band 7
+ 0: CF
+ 0: Boost/Cut
+Band 8
+ 0: CF
+ 0: Boost/Cut
+Band 9
+ 0: CF
+ 0: Boost/Cut
+Band 10
+ 0: CF
+ 0: Boost/Cut
+
+```
